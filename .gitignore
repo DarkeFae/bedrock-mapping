@@ -1,4 +1,5 @@
-input/
+input/*
 output/
 tmp/
 node_modules/
+.vscode/
