@@ -1,0 +1,14 @@
+{
+  "name": "bedrock-mapping",
+  "version": "1.0.0",
+  "description": "map sprites for bedrock via json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DarkeFae",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
