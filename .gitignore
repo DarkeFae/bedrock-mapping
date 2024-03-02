@@ -1,5 +1,8 @@
 input/*
-output/
-tmp/
+output/*
+tmp/*
 node_modules/
 .vscode/
+missing/*
+map/*
+backup/

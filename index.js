@@ -3,9 +3,16 @@ const fs = require('fs');
 const input = 'input/items_ids_cache.yml';
 const tmp = 'tmp/tmp.json';
 const obj = yaml.load(fs.readFileSync(input, { encoding: 'utf8' }));
+const map = require('./map.js');
 
 async function main() {
 	await ymlToJSON();
+	await jsoner();
+	map()
+
+}
+
+async function jsoner() {
 	fs.readFile(tmp, 'utf8', (err, jsonString) => {
 		if (err) {
 			console.log("File read failed:", err);
@@ -19,9 +26,8 @@ async function main() {
 				outputJSON[key].push({"custom_model_data": object[key][key2], "item_id": `bedrock/${key2.replace(":", "/")}.png`});
 			}
 		}
-		fs.writeFileSync('output/sprites.json', JSON.stringify(outputJSON));
+		fs.writeFileSync('output/tmp.json', JSON.stringify(outputJSON));
 	})
-
 }
 
 async function ymlToJSON() {
